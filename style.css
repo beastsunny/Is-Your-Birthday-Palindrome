@@ -33,3 +33,33 @@ h2 {
     font-family: 'Dancing Script', cursive;
     max-width: 100%;
 }
+
+#dob {
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: 5px auto;
+    margin-bottom: 10px;
+}
+
+#check-btn {
+    max-width: 100px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: auto;
+}
+
+#output {
+    padding: 1rem;
+    width: 97%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: white;
+}
+
+#check-btn:hover {
+    background-color: rgba(206, 205, 205, 0.788);
+}
