@@ -56,6 +56,25 @@ const isLeapYear = (year) => {
     return false;
 };
 
+const nextDate = (date) => {
+    let daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (isLeapYear(date.year)) {
+        daysInMonth[1] = 29;
+    }
+    date.day++;
+    if (date.day > daysInMonth[date.month - 1]) {
+        date.day = 1;
+        date.month++;
+    }
+    if (date.month > 12) {
+        date.month = 1;
+        date.year++;
+    }
+    return date;
+};
+
+
+
 
 
 
