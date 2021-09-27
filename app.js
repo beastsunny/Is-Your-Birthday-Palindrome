@@ -19,3 +19,26 @@ const convertDateToString = (date) => {
     convertedDate.year = date.year.toString();
     return convertedDate;
 };
+
+const getAllVariations = (date) => {
+    date = convertDateToString(date);
+    const ddmmyyyy = date.day + date.month + date.year;
+    const mmddyyyy = date.month + date.day + date.year;
+    const yyyymmdd = date.year + date.month + date.day;
+    const ddmmyy = date.day + date.month + date.year.slice(-2);
+    const mmddyy = date.month + date.day + date.year.slice(-2);
+    const yymmdd = date.year.slice(-2) + date.month + date.day;
+
+    const variations = [ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yymmdd];
+    return variations;
+};
+
+
+
+
+
+
+
+checkBtn.addEventListener("click", () => {
+            let message = "";
+            const dob = dateEl.value;
