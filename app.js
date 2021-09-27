@@ -33,6 +33,29 @@ const getAllVariations = (date) => {
     return variations;
 };
 
+const isPalindromeForAnyVariation = (date) => {
+    const variations = getAllVariations(date);
+    for (const typeVar of variations) {
+        if (isPalindrome(typeVar)) {
+            return true;
+        }
+    }
+    return false;
+};
+
+const isLeapYear = (year) => {
+    if (year % 400 === 0) {
+        return true;
+    }
+    if (year % 100 === 0) {
+        return false;
+    }
+    if (year % 4 === 0) {
+        return true;
+    }
+    return false;
+};
+
 
 
 
