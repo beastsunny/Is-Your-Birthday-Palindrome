@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+:root {
+    --background-color: #e2dddd;
+}
+
+* {
+    font-family: 'Acme', sans-serif;
+}
