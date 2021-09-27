@@ -73,14 +73,38 @@ const nextDate = (date) => {
     return date;
 };
 
-
-
-
-
-
-
+const nextPalindromeDate = (date) => {
+    let numOfDays = 0;
+    while (true) {
+        numOfDays++;
+        date = nextDate(date);
+        if (isPalindromeForAnyVariation(date)) {
+            return [numOfDays, date];
+        }
+    }
+};
 
 
 checkBtn.addEventListener("click", () => {
-            let message = "";
-            const dob = dateEl.value;
+    let message = "";
+    const dob = dateEl.value;
+    if (dob !== "") {
+        const dobArr = dob.split("-");
+        const date = {
+            day: Number(dobArr[2]),
+            month: Number(dobArr[1]),
+            year: Number(dobArr[0]),
+        };
+        if (isPalindromeForAnyVariation(date)) {
+            message = "Yay! 🥳 Your Birthday is a Palindrome.";
+        } else {
+            let arr = nextPalindromeDate(date);
+            const dayOrDays = arr[0] === 1 ? "day" : "days";
+
+            message = `Alas! 😢 You missed by ${arr[0]} ${dayOrDays}. Next Palindrome date is ${arr[1].day}-${arr[1].month}-${arr[1].year}`;
+        }
+    } else {
+        message = "You haven't entered your Date of Birth, yet!"
+    }
+    output.innerText = message;
+});
