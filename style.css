@@ -63,3 +63,41 @@ h2 {
 #check-btn:hover {
     background-color: rgba(206, 205, 205, 0.788);
 }
+
+footer {
+    background-color: var(--background-color);
+    padding: 1rem;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.footHeading {
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    color: black;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+ul {
+    padding-inline-start: 0px;
+    margin: 0.5rem auto 0 auto;
+}
+
+li {
+    display: inline;
+    font-size: 2rem;
+    margin: 0 0.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-weight: 1000;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    color: lightcoral;
+}
